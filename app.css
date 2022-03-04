@@ -13222,6 +13222,19 @@ fieldset:disabled .btn {
           transform-origin: bottom;
 }
 
+.animate-bounce {
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-name: bounce;
+          animation-name: bounce;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+}
+
 @-webkit-keyframes bounce {
   0% {
     -webkit-transform: translateY(0);

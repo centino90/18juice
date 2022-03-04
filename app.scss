@@ -131,6 +131,14 @@ $font-family-base: "Inter", sans-serif;
   transform-origin: bottom;
 }
 
+.animate-bounce {
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-name: bounce;
+  animation-timing-function: ease;
+  transform-origin: bottom;
+}
+
 @keyframes bounce {
   0%   { transform: translateY(0); }
   50%  { transform: translateY(-20px); }
