@@ -20,13 +20,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <!-- 
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-      crossorigin="anonymous"
-    /> -->
 
     <link
       rel="stylesheet"
@@ -35,7 +28,7 @@
 
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-    <link rel="stylesheet" href="./app.css" />
+    <link rel="stylesheet" href="./assets/css/app.css" />
 
     <script
       defer
@@ -52,14 +45,6 @@
 
     <script
       defer
-      src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
-      integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D"
-      crossorigin="anonymous"
-      async
-    ></script>
-
-    <script
-      defer
       src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"
     ></script>
 
@@ -70,7 +55,7 @@
   </head>
   <body class="position-relative">
     <div class="container-fluid px-0 position-relative">
-      <!-- offscreens -->
+      <!-- fixed scroller -->
       <button
         id="main__scroller-btn"
         class="opacity-0 pe-none position-fixed bottom-0 end-0 m-5 btn btn-light shadow-sm text-primary"
@@ -93,6 +78,7 @@
         </svg>
       </button>
 
+      <!-- Formsubmit Success offcanvas -->
       <div
         class="offcanvas offcanvas-top"
         data-bs-scroll="true"
@@ -123,6 +109,36 @@
         </div>
       </div>
 
+      <!-- Fullscreen map modal -->
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-fullscreen">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Map Fullscreen</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <img
+                class="w-100 h-100"
+                src="./assets/images/location-map.png"
+                alt="Google Map"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
       <header class="sticky-top">
         <nav
           id="main__nav"
@@ -130,7 +146,7 @@
         >
           <div class="container">
             <a href="/" class="navbar-brand">
-              <span class="fs-4">Simple header</span>
+              <span class="fs-4">18Juice</span>
             </a>
 
             <button
@@ -146,6 +162,16 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
               <ul class="navbar-nav gap-3 ms-auto">
+                <li class="nav-item">
+                  <select
+                    id="language-toggler"
+                    class="nav-link bg-transparent border-0"
+                    onchange="window.location.href = event.target.value"
+                  >
+                    <option value="index.html">Thai</option>
+                    <option selected value="index-en.html">English</option>
+                  </select>
+                </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#section__hero">Home</a>
                 </li>
@@ -239,44 +265,33 @@
               data-aos="fade-up"
               class="vstack align-items-center py-5 mt-5"
             >
-              <h1 class="position-relative display-3 fw-bolder">
-                <span style="z-index: 10"
+              <h1 class="display-3 fw-bolder">
+                <span
                   >About
                   <span class="display-2 fw-bolder text-primary"
                     >18Juice</span
                   ></span
                 >
-
-                <img
-                  style="z-index: -1"
-                  class="position-absolute end-0 bottom-0"
-                  src="./orange-unopened.svg"
-                  alt="Orange unopened"
-                  width="70"
-                />
-                <img
-                  style="z-index: -1"
-                  class="position-absolute start-0 top-0"
-                  src="./orange-opened.svg"
-                  alt="Orange opened"
-                  width="70"
-                />
               </h1>
-              <p class="lead">All great dreams begin with a vision.</p>
+              <p class="lead">
+                <span class="language-english">
+                  All great dreams begin with a vision.
+                </span>
+              </p>
             </header>
 
             <div class="py-5 my-5 position-relative">
               <img
                 style="z-index: 1"
                 class="position-absolute start-100 bottom-100 animate-bounce"
-                src="./orange-stroke.svg"
+                src="./assets/images/orange-stroke.svg"
                 alt="Orange rays"
                 width="400"
               />
               <img
                 style="z-index: 1"
                 class="position-absolute end-100 top-100 animate-bounce"
-                src="./pink-stroke.svg"
+                src="./assets/images/pink-stroke.svg"
                 alt="Orange rays"
                 width="400"
               />
@@ -291,10 +306,12 @@
                   <div class="col-lg-8 p-5">
                     <figure>
                       <h1 class="display-5 fw-bold">
-                        Praphan Rayayoi's
-                        <span class="text-primary display-4 fw-bold"
-                          >Vision</span
-                        >
+                        <span class="language-english"
+                          >Praphan Rayayoi's
+                          <span class="text-primary display-4 fw-bold"
+                            >Vision</span
+                          >
+                        </span>
                       </h1>
 
                       <blockquote class="blockquote">
@@ -316,9 +333,9 @@
 
             <div class="row g-4">
               <div data-aos="zoom-in" class="col-lg-4">
-                <div class="card bg-primary text-white text-center">
+                <div class="card border-primary text-primary text-center">
                   <div class="card-body">
-                    <p class="card-text h5">
+                    <p class="card-text h5 fw-bolder">
                       18 Juice is the new force in juicing
                     </p>
                   </div>
@@ -333,8 +350,8 @@
                         <div class="row">
                           <h1 class="card-title col-4" style="width: 80px">
                             <img
-                              class="img-fluid "
-                              src="./lemon-juice.svg"
+                              class="img-fluid"
+                              src="./assets/images/lemon-juice.svg"
                               alt="Lemon juice"
                             />
                           </h1>
@@ -343,7 +360,7 @@
                             forward to serving you fresh and naturally healthy
                             cold pressed juices and smoothies.
                           </p>
-                        </div>                     
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -351,10 +368,19 @@
                   <div data-aos="fade-left" class="col-12">
                     <div class="card border-primary bg-light text-dark">
                       <div class="card-body">
-                        <p class="card-text">
-                          Our age-defying range of fresh juices will have you
-                          feeling like you are 18 every day.
-                        </p>
+                        <div class="row">
+                          <h1 class="card-title col-4" style="width: 80px">
+                            <img
+                              class="img-fluid"
+                              src="./assets/images/melon-juice.svg"
+                              alt="Lemon juice"
+                            />
+                          </h1>
+                          <p class="card-text col">
+                            Our age-defying range of fresh juices will have you
+                            feeling like you are 18 every day.
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -362,11 +388,20 @@
                   <div data-aos="fade-left" class="col-12">
                     <div class="card border-primary bg-light text-dark">
                       <div class="card-body">
-                        <p class="card-text">
-                          If you value your health, ensure you consume all the
-                          vitamins and nutrients you need naturally and
-                          conveniently.
-                        </p>
+                        <div class="row">
+                          <h1 class="card-title col-4" style="width: 80px">
+                            <img
+                              class="img-fluid"
+                              src="./assets/images/cherry-juice.svg"
+                              alt="Lemon juice"
+                            />
+                          </h1>
+                          <p class="card-text col">
+                            If you value your health, ensure you consume all the
+                            vitamins and nutrients you need naturally and
+                            conveniently.
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -390,6 +425,11 @@
             <div class="row g-4">
               <div data-aos="fade-right" class="col-12">
                 <h1>Contact & Address Details</h1>
+
+                <p class="lead col-7">
+                  Give us a visit. Check our social media so that you can keep
+                  updated.
+                </p>
               </div>
               <div class="col-lg-4">
                 <div
@@ -400,11 +440,11 @@
                   <div class="card-body">
                     <div class="row">
                       <h1 class="card-title col-4" style="width: 80px">
-                        <img class="img-fluid" src="./gmail.svg" alt="Email" />
+                        <img class="img-fluid" src="./assets/images/gmail.svg" alt="Email" />
                       </h1>
 
                       <p class="card-text col-8">
-                        <a href="mailto:iam@18juice.com">iam@18juice.com</a>
+                        <a href="mailto:tam@18juice.com">tam@18juice.com</a>
                       </p>
                     </div>
                   </div>
@@ -415,7 +455,7 @@
                   <div class="card-body">
                     <div class="row">
                       <h1 class="card-title col-4" style="width: 80px">
-                        <img class="img-fluid" src="./fb.svg" alt="Facebook" />
+                        <img class="img-fluid" src="./assets/images/fb.svg" alt="Facebook" />
                       </h1>
 
                       <p class="card-text col-8">
@@ -440,7 +480,7 @@
                       <h1 class="card-title col-4" style="width: 80px">
                         <img
                           class="img-fluid"
-                          src="./instagram.svg"
+                          src="./assets/images/instagram.svg"
                           alt="Instagram"
                         />
                       </h1>
@@ -464,12 +504,12 @@
                     data-aos-duration="1300"
                     class="card bg-light"
                   >
-                    <div class="card-body">
+                    <!-- <div class="card-body">
                       <div class="row">
                         <h1 class="card-title col-4" style="width: 80px">
                           <img
                             class="img-fluid"
-                            src="./whatsapp.svg"
+                            src="./assets/images/whatsapp.svg"
                             alt="whatsapp"
                           />
                         </h1>
@@ -482,14 +522,14 @@
                           >
                         </p>
                       </div>
-                    </div>
+                    </div> -->
 
                     <div class="card-body">
                       <div class="row">
                         <h1 class="card-title col-4" style="width: 80px">
                           <img
                             class="img-fluid"
-                            src="./location.svg"
+                            src="./assets/images/location.svg"
                             alt="location"
                           />
                         </h1>
@@ -515,13 +555,18 @@
                   <div class="card-body">
                     <div class="row">
                       <h1 class="card-title col-4" style="width: 80px">
-                        <img class="img-fluid" src="./map.svg" alt="Map" />
+                        <img class="img-fluid" src="./assets/images/map.svg" alt="Map" />
                       </h1>
 
-                      <div class="card-text col">
+                      <div
+                        id="map-wrapper"
+                        class="card-text col overflow-hidden"
+                        data-bs-toggle="modal"
+                        data-bs-target="#exampleModal"
+                      >
                         <img
                           class="img-fluid w-100"
-                          src="./location-map.png"
+                          src="./assets/images/location-map.png"
                           alt="Google Map"
                         />
                       </div>
@@ -534,15 +579,11 @@
         </section>
 
         <section id="section__form">
-          <div
-            data-aos="zoom-in-up"
-            class="container overflow-hidden"
-            style="max-height: 1150px"
-          >
+          <div data-aos="zoom-in-up" class="container overflow-hidden">
             <div class="container p-0 m-0">
               <div class="row pt-5 mt-lg-5">
                 <div
-                  class="col-12 mx-auto bg-white shadow-lg px-lg-5 py-5 rounded-3"
+                  class="col-12 mx-auto bg-white shadow-lg px-sm-5 py-5 rounded-top"
                 >
                   <header class="col-12 col-xl-8 mx-auto text-center">
                     <h1 class="mb-3 display-3 text-center fw-bolder">
@@ -714,26 +755,10 @@
 
       <footer id="section__footer" class="bg-light position-relative">
         <div
-          class="container d-flex flex-wrap justify-content-between align-items-center text-light"
+          class="position-relative container d-flex flex-wrap justify-content-between align-items-center text-light"
         >
-          <div
-            class="col-12 col-md-4 vstack justify-content-center align-items-center align-items-lg-start text-muted"
-          >
-            <span class="text-dark"
-              >© <span id="current_year"></span> 18juice</span
-            >
-            <small class="position-absolute bottom-0 start-0 p-3"
-              >Developed by
-              <a
-                class="text-decoration-none"
-                href="https://centino90.github.io/"
-                >Anthony</a
-              ></small
-            >
-          </div>
-
           <ul
-            class="nav col-12 col-md-4 gap-3 justify-content-center justify-content-lg-end"
+            class="nav col-12 col-md-6 gap-3 justify-content-center justify-content-lg-start"
           >
             <li class="">
               <a
@@ -760,7 +785,7 @@
               </a>
             </li>
             <li class="">
-              <a class="text-muted" href="mailto:iam@18juice.com">
+              <a class="text-muted" href="mailto:tam@18juice.com">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -829,6 +854,21 @@
               </a>
             </li>
           </ul>
+
+          <div
+            class="mb-5 col-12 col-md-6 vstack justify-content-center align-items-center align-items-lg-end text-muted"
+          >
+            <span class="text-dark"
+              >© <span id="current_year"></span> 18juice</span
+            >
+          </div>
+
+          <small class="position-absolute bottom-0 start-0 p-3 text-muted"
+            >Developed by
+            <a class="text-decoration-none" href="https://centino90.github.io/"
+              >Anthony</a
+            ></small
+          >
         </div>
       </footer>
     </div>

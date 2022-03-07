@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- 
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    /> -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+    />
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <link rel="stylesheet" href="./assets/css/app.css" />
+
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+      integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+      integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
+      integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D"
+      crossorigin="anonymous"
+      async
+    ></script>
+
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"
+    ></script>
+
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.3/es6-shim.min.js"
+    ></script>
+  </head>
+  <body class="position-relative">
+    <div class="container-fluid px-0 position-relative">
+      <!-- fixed scroller -->
+      <button
+        id="main__scroller-btn"
+        class="opacity-0 pe-none position-fixed bottom-0 end-0 m-5 btn btn-light shadow-sm text-primary"
+        style="z-index: 100"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="feather feather-arrow-up"
+        >
+          <line x1="12" y1="19" x2="12" y2="5"></line>
+          <polyline points="5 12 12 5 19 12"></polyline>
+        </svg>
+      </button>
+
+      <!-- Formsubmit Success offcanvas -->
+      <div
+        class="offcanvas offcanvas-top"
+        data-bs-scroll="true"
+        data-bs-backdrop="false"
+        tabindex="-1"
+        id="offcanvasTop"
+        aria-labelledby="offcanvasTopLabel"
+      >
+        <div class="offcanvas-header">
+          <h5 id="offcanvasTopLabel"></h5>
+          <button
+            type="button"
+            class="btn-close text-reset"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="">
+          <div class="alert alert-success" role="alert">
+            <h4 class="alert-heading">Well done!</h4>
+            <p>You just successfully submitted a mail.</p>
+            <hr />
+            <p class="mb-0">
+              Whenever you need to inquire something you can always send us a
+              message. Or contact us via our social media accounts:
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fullscreen map modal -->
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-fullscreen">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Map Fullscreen</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <img
+                class="w-100 h-100"
+                src="./assets/images/location-map.png"
+                alt="Google Map"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <header class="sticky-top">
+        <nav
+          id="main__nav"
+          class="navbar navbar-expand-lg navbar-light bg-light"
+        >
+          <div class="container">
+            <a href="/" class="navbar-brand">
+              <span class="fs-4">18Juice</span>
+            </a>
+
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNavDropdown"
+              aria-controls="navbarNavDropdown"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav gap-3 ms-auto">
+                <li class="nav-item">
+                  <select
+                    id="language-toggler"
+                    class="nav-link bg-transparent border-0 w-100"
+                    onchange="window.location.href = event.target.value"
+                  >
+                    <option selected value="index.html">Thai</option>
+                    <option value="index-en.html">English</option>
+                  </select>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#section__hero">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#section__about">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#section__jumbotron"
+                    >Address details</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link btn btn-primary text-white"
+                    href="#section__form"
+                    >Mail us
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <main
+        data-bs-spy="scroll"
+        data-bs-target="#main__nav"
+        data-bs-offset="0"
+        class="scrollspy-example overflow-hidden"
+        tabindex="0"
+      >
+        <section
+          id="section__hero"
+          class="text-light bg-light text-center position-relative"
+        >
+          <div
+            id="section__hero-backdrop"
+            class="w-100 h-100 carousel slide carousel-fade"
+            data-bs-ride="carousel"
+            data-aos="fade-in"
+          >
+            <div class="carousel-inner w-100 h-100">
+              <div class="carousel-item active"></div>
+              <div class="carousel-item"></div>
+              <div class="carousel-item"></div>
+            </div>
+          </div>
+
+          <!-- <div
+            data-aos="fade-in"
+            id="section__hero-banner"
+            class="container pt-5 text-dark position-absolute start-0 top-0 top-50 start-50 translate-middle"
+            style="z-index: 100"
+          >
+            <h1 id="section__hero-title" class="display-2 fw-bolder">
+              Centered screenshot
+            </h1>
+
+            <div class="col-lg-6 mx-auto mt-3">
+              <p id="section__hero-message" class="lead mb-4">
+                Quickly design and customize responsive mobile-first sites with
+                Bootstrap, the world’s most popular front-end open source
+                toolkits.
+              </p>
+              <div class="my-5 row justify-content-center">
+                <div class="col-12">
+                  <a
+                    href="#section__form"
+                    class="btn btn-primary text-white btn-lg px-4 fw-bold rounded-0"
+                  >
+                    Send us a mail
+                  </a>
+                </div>
+
+                <div class="col-12">
+                  <a class="mt-5 pt-5 btn" href="#section__about">
+                    <i
+                      id="main__arrow-bottom"
+                      class="fs-2 fas fa-angle-double-down"
+                    ></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div> -->
+        </section>
+
+        <section id="section__about" class="overflow-hidden">
+          <div class="container">
+            <header
+              data-aos="fade-up"
+              class="vstack align-items-center py-5 mt-5"
+            >
+              <h1 class="display-3 fw-bolder">
+                <span
+                  >About
+                  <span class="display-2 fw-bolder text-primary"
+                    >18Juice</span
+                  ></span
+                >
+              </h1>
+              <p class="lead">
+                <span class="language-english">
+                  แรงบันดาลใจมักเป็นจุดเริ่มต้นแห่งความฝันอันยิ่งใหญ่
+                </span>
+              </p>
+            </header>
+
+            <div class="py-5 my-5 position-relative">
+              <img
+                style="z-index: 1"
+                class="position-absolute start-100 bottom-100 animate-bounce"
+                src="./assets/images/orange-stroke.svg"
+                alt="Orange rays"
+                width="400"
+              />
+              <img
+                style="z-index: 1"
+                class="position-absolute end-100 top-100 animate-bounce"
+                src="./assets/images/pink-stroke.svg"
+                alt="Orange rays"
+                width="400"
+              />
+
+              <div data-aos="fade-in" class="col-lg-6 mx-auto mb-4 bg-light rounded-3 overflow-hidden">
+                <div class="row">
+                  <div
+                    id="vision__image"
+                    class="col-12 overflow-hidden"
+                    style="min-height: 200px"
+                  ></div>
+                  <div class="col-12 p-5">
+                    <figure>
+                      <blockquote class="blockquote">
+                        <p class="lead text-center">
+                          คุณโอ๋แห่งร้านเอททีนจูส ขอนำเสนอน้ำผลไม้สกัดเย็นเพื่อสุขภาพ คัดสรรคุณภาพดีที่สุดจากธรรมชาติ 100% โดยให้บริการทั้งที่ร้านและบริการส่งถึงบ้าน
+                        </p>
+                      </blockquote>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row g-4">
+              <div data-aos="zoom-in" class="col-lg-4">
+                <div class="card border-primary text-primary text-center">
+                  <div class="card-body">
+                    <p class="card-text h5 fw-bolder">
+                      18 Juice is the new force in juicing
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-8">
+                <div class="row g-3">
+                  <div data-aos="fade-left" class="col-12">
+                    <div class="card border-primary bg-light text-dark">
+                      <div class="card-body overflow-hidden">
+                        <div class="row">
+                          <h1 class="card-title col-4" style="width: 80px">
+                            <img
+                              class="img-fluid"
+                              src="./assets/images/lemon-juice.svg"
+                              alt="Lemon juice"
+                            />
+                          </h1>
+                          <p class="card-text col">
+                            ร้านเอททีนจูส มีความมุ่งมั่นที่จะคัดสรรวัตถุดิบสดใหม่จากธรรมชาติรังสรรค์เป็นน้ำผลไม้ที่ดีที่สุด โดยใช้วิธีการสกัดเย็น เพื่อคงไว้ซึ่งคุณประโยชน์สุงสุด นอกจากนี้ยังมีน้ำผลไม้แบบปั่นสำหรับลูกค้าที่ชอบไฟเบอร์ในเนื้อผลไม้อีกด้วย
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div data-aos="fade-left" class="col-12">
+                    <div class="card border-primary bg-light text-dark">
+                      <div class="card-body">
+                        <div class="row">
+                          <h1 class="card-title col-4" style="width: 80px">
+                            <img
+                              class="img-fluid"
+                              src="./assets/images/melon-juice.svg"
+                              alt="Lemon juice"
+                            />
+                          </h1>
+                          <p class="card-text col">
+                            น้ำผลไม้สกัดของเรา จะทำให้คุณรู้สึกสดชื่น คืนความเป็นหนุ่มสาวแรกรุ่นดั่งอายุ18 ในทุกๆวัน
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div data-aos="fade-left" class="col-12">
+                    <div class="card border-primary bg-light text-dark">
+                      <div class="card-body">
+                        <div class="row">
+                          <h1 class="card-title col-4" style="width: 80px">
+                            <img
+                              class="img-fluid"
+                              src="./assets/images/cherry-juice.svg"
+                              alt="Lemon juice"
+                            />
+                          </h1>
+                          <p class="card-text col">
+                            หากคุณเป็นผู้ที่ให้ความสำคัญกับสุขภาพ ขอให้คุณมั่นใจได้ว่า คุณจะได้รับสิ่งที่ดีที่สุดทั้งวิตามินและเกลือแร่บริสุทธิ์จากธรรมชาติ ในบรรจุภัณฑ์ที่สะอาดทันสมัย ดื่มง่ายและพกพาสะดวก
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div data-aos="fade-left" class="col-12">
+                    <a
+                      href="#section__form"
+                      class="btn btn-lg btn-primary text-white w-100"
+                    >
+                    ติดต่อสอบถามข้อมูลเพิ่มเติมหรือสั่งซื้อ
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="section__jumbotron" class="my-5">
+          <div class="container py-5">
+            <div class="row g-4">
+              <div data-aos="fade-right" class="col-12">
+                <h1>Contact & Address Details</h1>
+
+                <p class="lead col-7">
+                  Give us a visit. Check our social media so that you can keep
+                  updated.
+                </p>
+              </div>
+              <div class="col-lg-4">
+                <div
+                  data-aos="flip-left"
+                  data-aos-duration="1300"
+                  class="card bg-light"
+                >
+                  <div class="card-body">
+                    <div class="row">
+                      <h1 class="card-title col-4" style="width: 80px">
+                        <img class="img-fluid" src="./assets/images/gmail.svg" alt="Email" />
+                      </h1>
+
+                      <p class="card-text col-8">
+                        <a href="mailto:tam@18juice.com">tam@18juice.com</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div data-aos="flip-left" class="card bg-light">
+                  <div class="card-body">
+                    <div class="row">
+                      <h1 class="card-title col-4" style="width: 80px">
+                        <img class="img-fluid" src="./assets/images/fb.svg" alt="Facebook" />
+                      </h1>
+
+                      <p class="card-text col-8">
+                        <a
+                          href="https://www.facebook.com/18Juice"
+                          target="_blank"
+                          >@18juice</a
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div
+                  data-aos="flip-left"
+                  data-aos-duration="1200"
+                  class="card bg-light"
+                >
+                  <div class="card-body">
+                    <div class="row">
+                      <h1 class="card-title col-4" style="width: 80px">
+                        <img
+                          class="img-fluid"
+                          src="./assets/images/instagram.svg"
+                          alt="Instagram"
+                        />
+                      </h1>
+
+                      <p class="card-text col-8">
+                        <a
+                          href="https://www.instagram.com/18juices/?hl=en"
+                          target="_blank"
+                          >@18juices</a
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4">
+                <div class="vstack g-3">
+                  <div
+                    data-aos="flip-left"
+                    data-aos-duration="1300"
+                    class="card bg-light"
+                  >
+                    <!-- <div class="card-body">
+                      <div class="row">
+                        <h1 class="card-title col-4" style="width: 80px">
+                          <img
+                            class="img-fluid"
+                            src="./assets/images/whatsapp.svg"
+                            alt="whatsapp"
+                          />
+                        </h1>
+
+                        <p class="card-text col">
+                          <a
+                            target="_blank"
+                            href="https://api.whatsapp.com/send?phone=66918255252&app=facebook&entry_point=page_cta&fbclid=IwAR1rXSJf6l4FxNFUBI_Fwnak5Z-749An4CSoheoQOnThASOofqLIbZhM_NE"
+                            >+66 091 825 5252</a
+                          >
+                        </p>
+                      </div>
+                    </div> -->
+
+                    <div class="card-body">
+                      <div class="row">
+                        <h1 class="card-title col-4" style="width: 80px">
+                          <img
+                            class="img-fluid"
+                            src="./assets/images/location.svg"
+                            alt="location"
+                          />
+                        </h1>
+
+                        <div class="card-text col">
+                          <a
+                            target="_blank"
+                            href="https://www.google.com/maps/place/Phuket,+Mueang+Phuket+District,+Phuket+83000,+Thailand/data=!4m2!3m1!1s0x305031fd2d6380a3:0x8df88000bd82f66b?sa=X&ved=2ahUKEwjrwey4var2AhU_yYsBHYZiAZoQ8gF6BAgJEAE"
+                            >Mueang Phuket District, Phuket 83000, Thailand</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-8">
+                <div
+                  data-aos="flip-left"
+                  data-aos-duration="1300"
+                  class="card bg-light"
+                >
+                  <div class="card-body">
+                    <div class="row">
+                      <h1 class="card-title col-4" style="width: 80px">
+                        <img class="img-fluid" src="./assets/images/map.svg" alt="Map" />
+                      </h1>
+
+                      <div
+                        id="map-wrapper"
+                        class="card-text col overflow-hidden"
+                        data-bs-toggle="modal"
+                        data-bs-target="#exampleModal"
+                      >
+                        <img
+                          class="img-fluid w-100"
+                          src="./assets/images/location-map.png"
+                          alt="Google Map"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="section__form">
+          <div data-aos="zoom-in-up" class="container overflow-hidden">
+            <div class="container p-0 m-0">
+              <div class="row pt-5 mt-lg-5">
+                <div
+                  class="col-12 mx-auto bg-white shadow-lg px-sm-5 py-5 rounded-top"
+                >
+                  <header class="col-12 col-xl-8 mx-auto text-center">
+                    <h1 class="mb-3 display-3 text-center fw-bolder">
+                      Send us a message
+                    </h1>
+                    <p class="fw-bold">
+                      We are always happy to receive your messages and respond
+                      quickly to your inquiries.
+                    </p>
+                  </header>
+
+                  <form
+                    class="pb-5"
+                    novalidate
+                    name="submit-to-google-sheet"
+                    target="_blank"
+                    action="https://formsubmit.co/d3efd1e941e9c6c6068b0f9d3d2ac83e"
+                    method="POST"
+                  >
+                    <input
+                      type="hidden"
+                      name="_subject"
+                      value="New submission!"
+                    />
+                    <input type="text" name="_honey" style="display: none" />
+                    <input type="hidden" name="_captcha" value="false" />
+                    <input
+                      type="hidden"
+                      name="_autoresponse"
+                      value="Thankyou for submitting a message."
+                    />
+                    <input type="hidden" name="_template" value="table" />
+
+                    <div class="row g-4 py-5">
+                      <div class="col-12 col-xl-9 mx-auto">
+                        <label
+                          for="email"
+                          class="form-label fw-bold text-primary"
+                          >Email
+                          <span class="text-muted"
+                            >(required | valid email)</span
+                          ></label
+                        >
+                        <input
+                          name="email"
+                          type="email"
+                          class="form-control form-control-lg"
+                          id="email"
+                          placeholder="you@example.com"
+                          required
+                        />
+
+                        <div id="emailError" class="invalid-feedback"></div>
+                      </div>
+
+                      <div class="col-12 col-xl-9 mx-auto">
+                        <label
+                          for="name"
+                          class="form-label fw-bold text-primary"
+                          >Name
+                          <span class="text-muted">(required)</span></label
+                        >
+                        <input
+                          name="name"
+                          type="text"
+                          class="form-control form-control-lg"
+                          id="name"
+                          placeholder="John Doe"
+                        />
+
+                        <div id="nameError" class="invalid-feedback"></div>
+                      </div>
+
+                      <div class="col-12 col-xl-9 mx-auto mb-5">
+                        <label
+                          for="contactNumber"
+                          class="form-label fw-bold text-primary"
+                          >Contact number
+                          <span class="text-muted"
+                            >(required | valid phone #)</span
+                          ></label
+                        >
+
+                        <input
+                          name="contactNumber"
+                          type="tel"
+                          class="form-control form-control-lg"
+                          id="contactNumber"
+                          placeholder=""
+                        />
+                      </div>
+
+                      <div class="mt-5"></div>
+
+                      <div class="col-12 col-xl-9 mx-auto">
+                        <label
+                          for="subject"
+                          class="form-label fw-bold text-primary"
+                          >Subject
+                          <span class="text-muted">(required)</span></label
+                        >
+                        <select
+                          name="subject"
+                          type="textarea"
+                          class="form-select form-select-lg"
+                          id="subject"
+                          required
+                          rows="4"
+                        >
+                          <option value="General Inquiry">
+                            General Inquiry
+                          </option>
+                          <option value="Order">Order</option>
+                          <option value="Wholesale/Reseller Enquiry">
+                            Wholesale/Reseller Enquiry
+                          </option>
+                        </select>
+
+                        <div id="subjectError" class="invalid-feedback">
+                          Message field should not be empty!. Please check your
+                          input carefully.
+                        </div>
+                      </div>
+
+                      <div class="col-12 col-xl-9 mx-auto">
+                        <label
+                          for="message"
+                          class="form-label fw-bold text-primary"
+                          >Message
+                          <span class="text-muted">(required)</span></label
+                        >
+                        <textarea
+                          name="message"
+                          type="textarea"
+                          class="form-control form-control-lg"
+                          id="message"
+                          placeholder="Your message here..."
+                          required
+                          rows="4"
+                        ></textarea>
+
+                        <div id="messageError" class="invalid-feedback">
+                          Message field should not be empty!. Please check your
+                          input carefully.
+                        </div>
+                      </div>
+
+                      <div class="col-12 col-xl-9 mx-auto text-center mb-5">
+                        <button
+                          class="w-100 btn btn-primary btn-lg text-white"
+                          type="submit"
+                        >
+                          <span
+                            class="d-none spinner-grow"
+                            role="status"
+                            aria-hidden="true"
+                          ></span>
+                          <span class="submit-text">Send</span>
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer id="section__footer" class="bg-light position-relative">
+        <div
+          class="position-relative container d-flex flex-wrap justify-content-between align-items-center text-light"
+        >
+          <ul
+            class="nav col-12 col-md-6 gap-3 justify-content-center justify-content-lg-start"
+          >
+            <li class="">
+              <a
+                class="text-muted"
+                href="https://api.whatsapp.com/send?phone=66918255252&app=facebook&entry_point=page_cta&fbclid=IwAR1rXSJf6l4FxNFUBI_Fwnak5Z-749An4CSoheoQOnThASOofqLIbZhM_NE"
+                target="_blank"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-phone-call"
+                >
+                  <path
+                    d="M15.05 5A5 5 0 0 1 19 8.95M15.05 1A9 9 0 0 1 23 8.94m-1 7.98v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                  ></path>
+                </svg>
+              </a>
+            </li>
+            <li class="">
+              <a class="text-muted" href="mailto:tam@18juice.com">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-mail"
+                >
+                  <path
+                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                  ></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </a>
+            </li>
+            <li class="">
+              <a
+                class="text-muted"
+                href="https://www.facebook.com/18Juice"
+                target="_blank"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-facebook"
+                >
+                  <path
+                    d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li class="">
+              <a
+                class="text-muted"
+                href="https://www.instagram.com/18juices/?hl=en"
+                target="_blank"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-instagram"
+                >
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                </svg>
+              </a>
+            </li>
+          </ul>
+
+          <div
+            class="mb-5 col-12 col-md-6 vstack justify-content-center align-items-center align-items-lg-end text-muted"
+          >
+            <span class="text-dark"
+              >© <span id="current_year"></span> 18juice</span
+            >
+          </div>
+
+          <small class="position-absolute bottom-0 start-0 p-3 text-muted"
+            >Developed by
+            <a class="text-decoration-none" href="https://centino90.github.io/"
+              >Anthony</a
+            ></small
+          >
+        </div>
+      </footer>
+    </div>
+  </body>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      // disable: "phone",
+      duration: 800,
+      mirror: false,
+      offset: 60,
+      delay: 50,
+      easing: "ease-in-out-quart",
+    })
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const d = new Date()
+      document.querySelector("#current_year").textContent = d.getFullYear()
+
+      var myOffcanvas = document.getElementById("offcanvasTop")
+      var bsOffcanvas = new bootstrap.Offcanvas(myOffcanvas)
+
+      var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+        target: "#navbar-example",
+      })
+
+      window.addEventListener("scroll", function (event) {
+        if (window.scrollY > 200) {
+          document
+            .querySelector("#main__nav")
+            .classList.add("p-0", "opacity-75")
+        } else {
+          document
+            .querySelector("#main__nav")
+            .classList.remove("p-0", "opacity-75")
+        }
+
+        if (window.scrollY > 400) {
+          document
+            .querySelector("#main__scroller-btn")
+            .classList.remove("opacity-0", "pe-none")
+        } else {
+          document
+            .querySelector("#main__scroller-btn")
+            .classList.add("opacity-0", "pe-none")
+        }
+      })
+
+      document
+        .querySelector("#main__scroller-btn")
+        .addEventListener("click", function () {
+          document.body.scrollTop = 0
+          document.documentElement.scrollTop = 0
+        })
+
+      class Validations {
+        hasError = false
+
+        __construct() {
+          this.fieldElement = ""
+          this.fieldType = ""
+          this.fieldValue = ""
+          this.fieldLabel = ""
+
+          this.errorElement = ""
+          this.errorMsg = ""
+        }
+
+        init(fieldSelector, errorSelector) {
+          this.fieldElement = document.querySelector(fieldSelector)
+          this.fieldType = this.fieldElement.getAttribute("type")
+          this.fieldValue = this.fieldElement.value
+          this.fieldLabel = this.fieldElement.getAttribute("name")
+          this.errorElement = document.querySelector(errorSelector)
+
+          if (!this.validateRequired()) {
+            this.errorMsg = `${this.fieldLabel} field must not be empty! Please check your inputs carefully.`
+            this.errorElement.textContent = this.errorMsg
+            this.fieldElement.classList.add("is-invalid")
+            this.hasError = true
+
+            return this
+          } else {
+            if (this.fieldType === "email") {
+              if (!this.validateEmail()) {
+                this.errorMsg = `${this.fieldLabel} field must be a valid email! Please check your inputs carefully.`
+                this.errorElement.textContent = this.errorMsg
+                this.fieldElement.classList.add("is-invalid")
+                this.hasError = true
+              }
+
+              return this
+            }
+          }
+
+          this.fieldElement.classList.remove("is-invalid")
+
+          return this
+        }
+
+        validateRequired() {
+          return !!this.fieldValue
+        }
+
+        validateEmail() {
+          return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(
+            this.fieldValue
+          )
+        }
+      }
+
+      const form = document.forms["submit-to-google-sheet"]
+
+      const googleScriptURL =
+        "https://script.google.com/macros/s/AKfycbx38Fb47tdGrqhP-HeA28B8iO7h8j6pS99dstahspxkpnnJ7bZx/exec"
+
+      const phoneInputField = document.querySelector("#contactNumber")
+
+      const phoneInput = window.intlTelInput(phoneInputField, {
+        preferredCountries: ["th", "us", "ph"],
+        initialCountry: "auto",
+        geoIpLookup: getIp,
+        formatOnDisplay: true,
+        utilsScript:
+          "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+        customContainer: "w-100",
+      })
+
+      function getIp(callback) {
+        const FreeGoIpToken = "aa603e00-96ee-11ec-895f-fd3df6a27034"
+
+        fetch(`https://api.freegeoip.app/json/?apikey=${FreeGoIpToken}`, {
+          headers: { Accept: "application/json" },
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            const { country_code } = data
+            return {
+              country: country_code,
+            }
+          })
+          .catch((err) => {
+            return {
+              country: "th",
+            }
+          })
+          .then((resp) => callback(resp.country))
+      }
+
+      const numberErr = document.createElement("div")
+      const contactNumberEl = document.querySelector("#contactNumber")
+      numberErr.classList.add(
+        "invalid-feedback",
+        "position-absolute",
+        "alert",
+        "alert-warning",
+        "mt-3"
+      )
+      numberErr.textContent =
+        "Invalid contact number! Please check your inputs carefully."
+      contactNumberEl.closest("div").appendChild(numberErr)
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault()
+
+        const fullFormData = new FormData(form)
+        const formSubmitURL = form.getAttribute("action")
+        const formSubmitBtn = form.querySelector("[type=submit]")
+        const formSubmitBtnTextEl = formSubmitBtn.querySelector(".submit-text")
+        const formSubmitBtnText = formSubmitBtnTextEl.textContent
+        const formSubmitBtnSpinnerEl =
+          formSubmitBtn.querySelector(".spinner-grow")
+
+        function validateContactNumber() {
+          const error = phoneInput.getValidationError()
+          let hasError = false
+
+          if (!!error) {
+            console.log("inside", error)
+            hasError = true
+          }
+          console.log("outside", error)
+
+          if (
+            !fullFormData.get("contactNumber") ||
+            isNaN(fullFormData.get("contactNumber"))
+          ) {
+            hasError = true
+          }
+
+          hasError
+            ? contactNumberEl.classList.add("is-invalid")
+            : contactNumberEl.classList.remove("is-invalid")
+
+          return hasError
+        }
+        const valEmail = new Validations().init("#email", "#emailError")
+        const valName = new Validations().init("#name", "#nameError")
+        const valMsg = new Validations().init("#message", "#messageError")
+        const valNumber = validateContactNumber()
+
+        if (
+          valEmail.hasError ||
+          valName.hasError ||
+          valMsg.hasError ||
+          valNumber
+        ) {
+          return
+        }
+
+        formSubmitBtnTextEl.textContent = "Loading..."
+        formSubmitBtnSpinnerEl.classList.remove("d-none")
+
+        // const googleFormData = new FormData()
+        // googleFormData.append("email", fullFormData.get("email"))
+
+        fetch(formSubmitURL, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify(Object.fromEntries(fullFormData.entries())),
+        })
+          .then((res) => {
+            form.reset()
+            bsOffcanvas.show()
+            setTimeout(() => {
+              bsOffcanvas.hide()
+            }, 15000)
+
+            formSubmitBtnTextEl.textContent = formSubmitBtnText
+            formSubmitBtnSpinnerEl.classList.add("d-none")
+          })
+          .catch((err) => {
+            alert("Something went wrong...")
+          })
+
+        // fetch(googleScriptURL, { method: "POST", body: googleFormData })
+        //   .then((response) => {
+        //     console.log("first fetch", response)
+
+        //     form.submit()
+        //     //   fetch(formSubmitURL, {
+        //     //     method: "POST",
+        //     //     headers: {
+        //     //       "Content-Type": "application/json",
+        //     //       "Accept": "application/json",
+        //     //     },
+        //     //     body: JSON.stringify(Object.fromEntries(fullFormData.entries())),
+        //     //   }).then(console.log)
+        //   })
+        //   .catch((error) => console.error("Error!", error.message))
+      })
+    })
+  </script>
+</html>
