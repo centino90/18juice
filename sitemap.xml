@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd"
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>http://18juice.com/</loc>
+        <lastmod>2022-03-26T17:03:08+00:00</lastmod>
+        <image:image>
+            <image:loc>http://18juice.com/#logo</image:loc>
+            <image:title><![CDATA[18juice-logo]]></image:title>
+        </image:image>
+        <image:image>
+            <image:loc>http://18juice.com/#header1</image:loc>
+            <image:title><![CDATA[header_1]]></image:title>
+        </image:image>
+        <image:image>
+            <image:loc>http://18juice.com/#header2</image:loc>
+            <image:title><![CDATA[header_2]]></image:title>
+        </image:image>
+        <image:image>
+            <image:loc>http://18juice.com/#header3</image:loc>
+            <image:title><![CDATA[header_3]]></image:title>
+        </image:image>
+        <image:image>
+            <image:loc>http://18juice.com/#owner</image:loc>
+            <image:title><![CDATA[Praphan-Rayayoi]]></image:title>
+        </image:image>
+    </url>
+
+    <url>
+        <loc>http://18juice.com/index-en.html</loc>
+        <lastmod>2022-03-26T17:03:08+00:00</lastmod>
+        <image:image>
+            <image:loc>http://18juice.com/#logo</image:loc>
+            <image:title><![CDATA[18juice-logo]]></image:title>
+        </image:image>
+        <image:image>
+            <image:loc>http://18juice.com/#header1</image:loc>
+            <image:title><![CDATA[header_1]]></image:title>
+        </image:image>
+        <image:image>
+            <image:loc>http://18juice.com/#header2</image:loc>
+            <image:title><![CDATA[header_2]]></image:title>
+        </image:image>
+        <image:image>
+            <image:loc>http://18juice.com/#header3</image:loc>
+            <image:title><![CDATA[header_3]]></image:title>
+        </image:image>
+        <image:image>
+            <image:loc>http://18juice.com/#owner</image:loc>
+            <image:title><![CDATA[Praphan-Rayayoi]]></image:title>
+        </image:image>
+    </url>
+</urlset>
