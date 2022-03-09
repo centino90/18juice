@@ -46,10 +46,7 @@
     />
 
     <!-- not edited yet -->
-    <meta
-      property="og:image"
-      content="http://18juice.com/#logo"
-    />
+    <meta property="og:image" content="http://18juice.com/#logo" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:type" content="image/jpeg" />
@@ -143,9 +140,9 @@
       }
     </script>
     <meta
-    name="google-site-verification"
-    content="k9Z5nPrd0EQcJDoFUfbWH069HUpugDHot0Cat4O2iws"
-  />
+      name="google-site-verification"
+      content="k9Z5nPrd0EQcJDoFUfbWH069HUpugDHot0Cat4O2iws"
+    />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -259,7 +256,7 @@
             <hr />
             <p class="mb-0">
               Whenever you need to inquire something you can always send us a
-              message. Or contact us via our social media accounts:
+              message. Or contact us via our social media accounts.
             </p>
           </div>
         </div>
@@ -301,8 +298,12 @@
           class="navbar navbar-expand-lg navbar-light bg-light"
         >
           <div class="container">
-            <a href="/" class="navbar-brand">
-              <span class="fs-4">18Juice</span>
+            <a href="./index.html" class="navbar-brand">
+              <img
+                src="./assets/images/logo-orange.png"
+                width="140px"
+                alt="18juice logo"
+              />
             </a>
 
             <button
@@ -318,15 +319,13 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
               <ul class="navbar-nav gap-3 ms-auto">
-                <li class="nav-item">
-                  <select
-                    id="language-toggler"
-                    class="nav-link bg-transparent border-0 w-100"
-                    onchange="window.location.href = event.target.value"
-                  >
-                    <option selected value="index.html">Thai</option>
-                    <option value="index-en.html">English</option>
-                  </select>
+                <li class="nav-item hstack gap-2 align-items-start">
+                  <a class="p-2" href="./index.html">
+                    <img width="16" src="./assets/images/flag-th.svg" alt="Thai" />
+                  </a>
+                  <a class="p-2" href="./index-en.html">
+                    <img width="16" src="./assets/images/flag-us.svg" alt="English" />
+                  </a>              
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#section__hero">Home</a>
@@ -335,8 +334,8 @@
                   <a class="nav-link" href="#section__about">About</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#section__jumbotron"
-                    >Address details</a
+                  <a class="nav-link" href="#section__products"
+                    >Products</a
                   >
                 </li>
                 <li class="nav-item">
@@ -375,44 +374,6 @@
               <div class="carousel-item"></div>
             </div>
           </div>
-
-          <!-- <div
-            data-aos="fade-in"
-            id="section__hero-banner"
-            class="container pt-5 text-dark position-absolute start-0 top-0 top-50 start-50 translate-middle"
-            style="z-index: 100"
-          >
-            <h1 id="section__hero-title" class="display-2 fw-bolder">
-              Centered screenshot
-            </h1>
-
-            <div class="col-lg-6 mx-auto mt-3">
-              <p id="section__hero-message" class="lead mb-4">
-                Quickly design and customize responsive mobile-first sites with
-                Bootstrap, the world’s most popular front-end open source
-                toolkits.
-              </p>
-              <div class="my-5 row justify-content-center">
-                <div class="col-12">
-                  <a
-                    href="#section__form"
-                    class="btn btn-primary text-white btn-lg px-4 fw-bold rounded-0"
-                  >
-                    Send us a mail
-                  </a>
-                </div>
-
-                <div class="col-12">
-                  <a class="mt-5 pt-5 btn" href="#section__about">
-                    <i
-                      id="main__arrow-bottom"
-                      class="fs-2 fas fa-angle-double-down"
-                    ></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div> -->
         </section>
 
         <section id="section__about" class="overflow-hidden">
@@ -570,6 +531,76 @@
           </div>
         </section>
 
+        <section id="section__products" class="my-5 py-5">
+          <div class="container">
+            <div class="row g-4">
+              <div data-aos="fade-right" class="col-12">
+                <h1>Featured products</h1>
+              </div>
+
+              <div class="col-md-6">
+                <div data-aos="fade" class="d-flex justify-content-center">
+                <img
+                id="products__ingredients"
+                  class="img-fluid rounded shadow"
+                  style="object-fit: cover"
+                  src="./assets/images/abundant.jpeg"
+                  alt="18juice natural ingredients"
+                />
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <div data-aos="fade" class="d-flex justify-content-center align-items-stretch">
+                      <img
+                        class="img-fluid img-thumbnail"
+                        style="object-fit: cover"
+                        src="./assets/images/glass-1.jpeg"
+                        alt="18juice mango flavor"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div data-aos="fade" class="d-flex justify-content-center align-items-stretch">
+                      <img
+                        class="img-fluid img-thumbnail"
+                        style="object-fit: cover"
+                        src="./assets/images/glass-2.jpeg"
+                        alt="18juice mango flavor"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div data-aos="fade" class="d-flex justify-content-center align-items-stretch">
+                      <img
+                        class="img-fluid img-thumbnail"
+                        style="object-fit: cover"
+                        src="./assets/images/glass-3.jpeg"
+                        alt="18juice mango flavor"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div data-aos="fade" class="d-flex justify-content-center align-items-stretch">
+                      <img
+                        class="img-fluid img-thumbnail"
+                        style="object-fit: cover"
+                        src="./assets/images/glass-4.jpeg"
+                        alt="18juice mango flavor"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section id="section__jumbotron" class="my-5">
           <div class="container py-5">
             <div class="row g-4">
@@ -598,7 +629,7 @@
                       </h1>
 
                       <p class="card-text col-8">
-                        <a href="mailto:tam@18juice.com">tam@18juice.com</a>
+                        <a href="#section__form">iam@18juice.com</a>
                       </p>
                     </div>
                   </div>
@@ -662,25 +693,6 @@
                     data-aos-duration="1300"
                     class="card bg-light"
                   >
-                    <!-- <div class="card-body">
-                      <div class="row">
-                        <h1 class="card-title col-4" style="width: 80px">
-                          <img
-                            class="img-fluid"
-                            src="./assets/images/whatsapp.svg"
-                            alt="whatsapp"
-                          />
-                        </h1>
-
-                        <p class="card-text col">
-                          <a
-                            target="_blank"
-                            href="https://api.whatsapp.com/send?phone=66918255252&app=facebook&entry_point=page_cta&fbclid=IwAR1rXSJf6l4FxNFUBI_Fwnak5Z-749An4CSoheoQOnThASOofqLIbZhM_NE"
-                            >+66 091 825 5252</a
-                          >
-                        </p>
-                      </div>
-                    </div> -->
 
                     <div class="card-body">
                       <div class="row">
@@ -695,8 +707,8 @@
                         <div class="card-text col">
                           <a
                             target="_blank"
-                            href="https://www.google.com/maps/place/Phuket,+Mueang+Phuket+District,+Phuket+83000,+Thailand/data=!4m2!3m1!1s0x305031fd2d6380a3:0x8df88000bd82f66b?sa=X&ved=2ahUKEwjrwey4var2AhU_yYsBHYZiAZoQ8gF6BAgJEAE"
-                            >Mueang Phuket District, Phuket 83000, Thailand</a
+                            href="https://www.google.com/maps/place/18,+28+Mae+Luan+Rd,+Tambon+Wichit,+Amphoe+Mueang+Phuket,+Chang+Wat+Phuket+83000,+Thailand/@7.8883302,98.3789273,17z/data=!3m1!4b1!4m5!3m4!1s0x305031ef23786b7f:0x12b9b288c6d2325f!8m2!3d7.8883302!4d98.381116"
+                            >18/28 Mae Luan Road Tambon Wichit Phuket 83000</a
                           >
                         </div>
                       </div>
@@ -947,7 +959,7 @@
               </a>
             </li>
             <li class="">
-              <a class="text-muted" href="mailto:tam@18juice.com">
+              <a class="text-muted" href="#section__form">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -1147,9 +1159,6 @@
 
       const form = document.forms["submit-to-google-sheet"]
 
-      const googleScriptURL =
-        "https://script.google.com/macros/s/AKfycbx38Fb47tdGrqhP-HeA28B8iO7h8j6pS99dstahspxkpnnJ7bZx/exec"
-
       const phoneInputField = document.querySelector("#contactNumber")
 
       const phoneInput = window.intlTelInput(phoneInputField, {
@@ -1158,7 +1167,7 @@
         geoIpLookup: getIp,
         formatOnDisplay: true,
         utilsScript:
-          "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+          "./assets/js/intl-tel-input.min.js",
         customContainer: "w-100",
       })
 
@@ -1212,10 +1221,8 @@
           let hasError = false
 
           if (!!error) {
-            console.log("inside", error)
             hasError = true
           }
-          console.log("outside", error)
 
           if (
             !fullFormData.get("contactNumber") ||
@@ -1247,9 +1254,6 @@
         formSubmitBtnTextEl.textContent = "Loading..."
         formSubmitBtnSpinnerEl.classList.remove("d-none")
 
-        // const googleFormData = new FormData()
-        // googleFormData.append("email", fullFormData.get("email"))
-
         fetch(formSubmitURL, {
           method: "POST",
           headers: {
@@ -1269,24 +1273,8 @@
             formSubmitBtnSpinnerEl.classList.add("d-none")
           })
           .catch((err) => {
-            alert("Something went wrong...")
-          })
-
-        // fetch(googleScriptURL, { method: "POST", body: googleFormData })
-        //   .then((response) => {
-        //     console.log("first fetch", response)
-
-        //     form.submit()
-        //     //   fetch(formSubmitURL, {
-        //     //     method: "POST",
-        //     //     headers: {
-        //     //       "Content-Type": "application/json",
-        //     //       "Accept": "application/json",
-        //     //     },
-        //     //     body: JSON.stringify(Object.fromEntries(fullFormData.entries())),
-        //     //   }).then(console.log)
-        //   })
-        //   .catch((error) => console.error("Error!", error.message))
+            alert("Something went wrong with the Form Submission Provider. Please try another mode of contact until we fix this.")
+          })      
       })
     })
   </script>

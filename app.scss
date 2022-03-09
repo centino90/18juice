@@ -1,27 +1,26 @@
-// @import "./node_modules/bootstrap/scss/bootstrap";
-
 // Required
-@import "../../../node_modules/bootstrap/scss/functions";
-@import "../../../node_modules/bootstrap/scss/variables";
-@import "../../../node_modules/bootstrap/scss/mixins";
+// // $warmOrange: #E76F51;
+@import "./node_modules/bootstrap/scss/functions";
+@import "./node_modules/bootstrap/scss/variables";
+@import "./node_modules/bootstrap/scss/mixins";
 
 //add new variables in bootstrap
-$bluish: #1E2EDE;
-$primary: #E76F51;
+$bluish: #1e2ede;
+$primary: #ef7d00;
 $lime: #f4ff52;
-$warmOrange: #E76F51;
-$dimGreen: #2A9D8F;
+$warmOrange: #ef7d00;
+$dimGreen: #2a9d8f;
 $darkGray: #264653;
-$warmYellow: #E9C46A;
-$lightGreen: #53FF45;
-$burgandy: #6A041D;
+$warmYellow: #e9c46a;
+$lightGreen: #53ff45;
+$burgandy: #6a041d;
 
 $custom-theme-colors: (
   "white": #fff,
   "primary": $primary,
   "primary-2": darken($primary, 2.5),
   "primary-3": darken($primary, 5),
-  "lime": $lime
+  "lime": $lime,
 );
 
 $theme-colors: map-merge($theme-colors, $custom-theme-colors);
@@ -31,25 +30,24 @@ $utilities-text-colors: map-loop($utilities-colors, rgba-css-var, "$key", "text"
 $utilities-bg-colors: map-loop($utilities-colors, rgba-css-var, "$key", "bg");
 
 // Default variable overrides
-$btn-border-width: .2rem;
+$btn-border-width: 0.2rem;
 $btn-border-radius: 0rem;
 $btn-border-radius-sm: 0rem;
 $btn-border-radius-lg: 0rem;
 $input-border-radius: 0rem;
-$input-border-radius-sm:   0rem;
+$input-border-radius-sm: 0rem;
 $input-border-radius-lg: 0rem;
-$input-border-width: .2rem;
+$input-border-width: 0.2rem;
 $input-border-color: $primary;
-$form-select-border-radius-lg:    0rem;
-$form-select-border-radius-sm:    0rem;
-$form-select-border-radius:    0rem;
+$form-select-border-radius-lg: 0rem;
+$form-select-border-radius-sm: 0rem;
+$form-select-border-radius: 0rem;
 $form-select-border-color: $primary;
-$form-select-border-width: .2rem;
+$form-select-border-width: 0.2rem;
 $font-family-base: "Inter", sans-serif;
 
 // Required
-@import "../../../node_modules/bootstrap/scss/bootstrap";
-
+@import "./node_modules/bootstrap/scss/bootstrap";
 
 #section__hero {
   height: 90vh;
@@ -57,39 +55,34 @@ $font-family-base: "Inter", sans-serif;
   overflow: hidden;
   position: relative;
 
-
   &-backdrop {
     .carousel-item {
       background-size: cover;
       background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-position: center center;
+      // background-attachment: fixed;
+      background-position: center top;
       width: 100%;
       height: 100%;
 
       &:nth-child(1) {
-        background-image: url("https://source.unsplash.com/random");
+        background-image: url("../images/header-1.jpeg");
       }
       &:nth-child(2) {
-        background-image: url("https://images.unsplash.com/photo-1644959713434-f6241e4284ec?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY0NjI5MTIyNg&ixlib=rb-1.2.1&q=80&w=1080");
-      } 
+        background-image: url("../images/header-2.jpeg");
+      }
       &:nth-child(3) {
-        background-image: url("https://images.unsplash.com/photo-1645491223603-218aa69dcec5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY0NjI5MTI4NA&ixlib=rb-1.2.1&q=80&w=1080");
-      }      
+        background-image: url("../images/header-3.jpeg");
+      }
     }
   }
 
   &-title {
-                 text-shadow: 10px 10px 25px rgba(0,0,0,0.2),
-                          -10px 10px 25px rgba(0,0,0,0.1),
-                          -10px -10px 25px rgba(0,0,0,0.05),
-                          10px -10px 25px rgba(0,0,0,0.05);
+    text-shadow: 10px 10px 25px rgba(0, 0, 0, 0.2), -10px 10px 25px rgba(0, 0, 0, 0.1),
+      -10px -10px 25px rgba(0, 0, 0, 0.05), 10px -10px 25px rgba(0, 0, 0, 0.05);
   }
 
   &-message {
-    text-shadow: 0px 15px 5px rgba(0,0,0,0.1),
-                 10px 20px 5px rgba(0,0,0,0.05),
-                 -10px 20px 5px rgba(0,0,0,0.05);
+    text-shadow: 0px 15px 5px rgba(0, 0, 0, 0.1), 10px 20px 5px rgba(0, 0, 0, 0.05), -10px 20px 5px rgba(0, 0, 0, 0.05);
   }
 }
 
@@ -110,18 +103,22 @@ $font-family-base: "Inter", sans-serif;
 }
 
 @keyframes bounce {
-  0%   { transform: translateY(0); }
-  50%  { transform: translateY(-20px); }
-  100% { transform: translateY(0); }
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 #section__about {
   // background-image: url("./endless-constellation.svg");
   header h1 {
-    text-shadow: 10px 10px 25px rgba(0,0,0,0.1),
-    -10px 10px 25px rgba(0,0,0,.08),
-    -10px -10px 25px rgba(0,0,0,0.05),
-    10px -10px 25px rgba(0,0,0,0.05);
+    text-shadow: 10px 10px 25px rgba(0, 0, 0, 0.1), -10px 10px 25px rgba(0, 0, 0, 0.08),
+      -10px -10px 25px rgba(0, 0, 0, 0.05), 10px -10px 25px rgba(0, 0, 0, 0.05);
   }
 }
 
@@ -157,26 +154,26 @@ $font-family-base: "Inter", sans-serif;
 }
 
 #main__nav {
-  transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
   transition-property: padding, opacity;
 }
 
 #main__scroller-btn {
-  transition: opacity .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: opacity 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 #vision__image {
-  background-image: url("https://source.unsplash.com/random");
+  background-image: url("../images/vision.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center top;
 }
 
 #map-wrapper {
   cursor: pointer;
   &:hover {
     img {
-      transition: transform .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+      transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
       transform: scale(1.025);
     }
   }
@@ -184,4 +181,19 @@ $font-family-base: "Inter", sans-serif;
 
 img {
   object-fit: fill;
+}
+
+#section__products {
+  img {
+    height: 300px;
+
+    @include media-breakpoint-up(sm) {
+      height: 450px;
+    }
+
+    @include media-breakpoint-up(md) {
+      height: auto;
+      width: auto;
+    }
+  }
 }
