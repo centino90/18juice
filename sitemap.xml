@@ -7,24 +7,49 @@
         <loc>http://18juice.com/</loc>
         <lastmod>2022-03-26T17:03:08+00:00</lastmod>
         <image:image>
-            <image:loc>http://18juice.com/#logo</image:loc>
+            <image:loc>http://18juice.com/assets/images/logo-orange.png</image:loc>
             <image:title><![CDATA[18juice-logo]]></image:title>
         </image:image>
         <image:image>
-            <image:loc>http://18juice.com/#header1</image:loc>
+            <image:loc>http://18juice.com/assets/images/header-1.jpeg</image:loc>
             <image:title><![CDATA[header_1]]></image:title>
         </image:image>
         <image:image>
-            <image:loc>http://18juice.com/#header2</image:loc>
+            <image:loc>http://18juice.com/assets/images/header-2.jpeg</image:loc>
             <image:title><![CDATA[header_2]]></image:title>
         </image:image>
         <image:image>
-            <image:loc>http://18juice.com/#header3</image:loc>
+            <image:loc>http://18juice.com/assets/images/header-3.jpeg</image:loc>
             <image:title><![CDATA[header_3]]></image:title>
         </image:image>
         <image:image>
-            <image:loc>http://18juice.com/#owner</image:loc>
+            <image:loc>http://18juice.com/assets/images/vision.jpeg</image:loc>
             <image:title><![CDATA[Praphan-Rayayoi]]></image:title>
+        </image:image>
+        <image:image>
+            <image:loc>http://18juice.com/assets/images/abundant.jpeg</image:loc>
+            <image:title><![CDATA[juice-products]]></image:title>
+        </image:image>
+        <image:image>
+            <image:loc>http://18juice.com/assets/images/glass-1.jpeg</image:loc>
+            <image:title><![CDATA[bottled-juice-mango]]></image:title>
+        </image:image>
+        <image:image>
+            <image:loc>http://18juice.com/assets/images/glass-2.jpeg</image:loc>
+            <image:title><![CDATA[bottled-juice-pineapple]]></image:title>
+        </image:image>
+        <image:image>
+            <image:loc>http://18juice.com/assets/images/glass-3.jpeg</image:loc>
+            <image:title><![CDATA[bottled-juice-orange]]></image:title>
+        </image:image>
+        <image:image>
+            <image:loc>http://18juice.com/assets/images/glass-4.jpeg</image:loc>
+            <image:title><![CDATA[bottled-juice-melon]]></image:title>
+        </image:image>
+
+        <image:image>
+            <image:loc>http://18juice.com/assets/images/glass-4.jpeg</image:loc>
+            <image:title><![CDATA[bottled-juice-melon]]></image:title>
         </image:image>
     </url>
 
@@ -32,24 +57,49 @@
         <loc>http://18juice.com/index-en.html</loc>
         <lastmod>2022-03-26T17:03:08+00:00</lastmod>
         <image:image>
-            <image:loc>http://18juice.com/#logo</image:loc>
+            <image:loc>http://18juice.com/assets/images/logo-orange.png</image:loc>
             <image:title><![CDATA[18juice-logo]]></image:title>
         </image:image>
         <image:image>
-            <image:loc>http://18juice.com/#header1</image:loc>
+            <image:loc>http://18juice.com/assets/images/header-1.jpeg</image:loc>
             <image:title><![CDATA[header_1]]></image:title>
         </image:image>
         <image:image>
-            <image:loc>http://18juice.com/#header2</image:loc>
+            <image:loc>http://18juice.com/assets/images/header-2.jpeg</image:loc>
             <image:title><![CDATA[header_2]]></image:title>
         </image:image>
         <image:image>
-            <image:loc>http://18juice.com/#header3</image:loc>
+            <image:loc>http://18juice.com/assets/images/header-3.jpeg</image:loc>
             <image:title><![CDATA[header_3]]></image:title>
         </image:image>
         <image:image>
-            <image:loc>http://18juice.com/#owner</image:loc>
+            <image:loc>http://18juice.com/assets/images/vision.jpeg</image:loc>
             <image:title><![CDATA[Praphan-Rayayoi]]></image:title>
+        </image:image>
+        <image:image>
+            <image:loc>http://18juice.com/assets/images/abundant.jpeg</image:loc>
+            <image:title><![CDATA[juice-products]]></image:title>
+        </image:image>
+        <image:image>
+            <image:loc>http://18juice.com/assets/images/glass-1.jpeg</image:loc>
+            <image:title><![CDATA[bottled-juice-mango]]></image:title>
+        </image:image>
+        <image:image>
+            <image:loc>http://18juice.com/assets/images/glass-2.jpeg</image:loc>
+            <image:title><![CDATA[bottled-juice-pineapple]]></image:title>
+        </image:image>
+        <image:image>
+            <image:loc>http://18juice.com/assets/images/glass-3.jpeg</image:loc>
+            <image:title><![CDATA[bottled-juice-orange]]></image:title>
+        </image:image>
+        <image:image>
+            <image:loc>http://18juice.com/assets/images/glass-4.jpeg</image:loc>
+            <image:title><![CDATA[bottled-juice-melon]]></image:title>
+        </image:image>
+
+        <image:image>
+            <image:loc>http://18juice.com/assets/images/glass-4.jpeg</image:loc>
+            <image:title><![CDATA[bottled-juice-melon]]></image:title>
         </image:image>
     </url>
 </urlset>
